@@ -1,0 +1,65 @@
+/* Whole Body Section */
+body{
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.padding{
+    padding: 2rem !important;
+}
+
+
+/* Top Section */
+.card-header{
+    background-color: blue;
+}
+.top-content{
+    padding: 15px 0px;
+}
+
+.logo img{
+    height: 100px;
+}
+
+.top-left p{
+    margin: 0;
+}
+
+.top-left .graphic-path{
+    height: 40px;
+    position: relative;
+}
+
+/* Heading Section */
+h3{
+    font-size: 20px;
+}
+
+h5{
+    font-size: 15px;
+    line-height: 26px;
+    color: #3d405c;
+    margin: 0px 0px 15px 0px;
+    font-family:'Courier New', Courier, monospace';
+}
+
+/* Table-Selction */
+.card{
+    margin-bottom: 30px;
+    border: none;
+    -webkit-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+}
+
+.card-header{
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6f2;
+}
+
+/* Footer Section */
+#footer{
+    text-align: center;
+}
+
