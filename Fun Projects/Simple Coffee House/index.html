@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-02</title>
+
+    <!--CSS Link-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <img src="./images/intro.jpg" alt="" id="myimg" width="300px" height="300px" class="myimg">
+    
+    <script>
+        //---For Open Gif---//
+        function open()
+        {
+            var img = document.getElementById('myimg');
+            img.src="./images/open.gif";
+        }
+
+        //---For Closed Gif---//
+        function closed()
+        {
+            var img = document.getElementById('myimg');
+            img.src="./images/closed.gif";
+        }
+        
+        //---For Invalid User---//
+        function Invalid()
+        {
+            var img = document.getElementById('myimg');
+            img.src="./images/error1.gif";
+        }
+
+        //---Get Time Using Library Funcitions---//
+        var today = new Date();
+        var Current_Hour = today.getHours();
+        var Current_Minute = today.getMinutes();
+        var Current_Second = today.getSeconds();
+
+        //---For User Input: Type of Users---//
+        var Type = prompt("Enter Your Type:(Customer,Waiter,Manager)");
+
+
+        if(Type=='Customer') //...For Customer...//
+        {
+            document.write("Hello Customer❤️<br>");
+            //...The customers can go into the coffee shop from 1 pm to 8 pm...
+            // 13/00/00
+            if(Current_Hour<13 || Current_Hour>20)
+            {
+                document.write("Sorry, Now Closed😞<br>");
+                closed();
+            }
+            else if(Current_Hour==20 && Current_Second>0)
+            {
+                document.write("Sorry, Now Closed😞<br>");
+                closed();
+            }
+            else
+            {
+                document.write("WelCome, Now Open😍<br>");
+                open();
+            }
+        }
+        else if(Type=='Waiter') //...For Waiter...//
+        {
+            document.write("Hello Waiter💙<br>");
+
+            //...The waiters can enter the coffee shop from 11 am to 10 pm...
+            if(Current_Hour<11 || Current_Hour>22)
+            {
+                document.write("Sorry, Now Closed😞<br>");
+                closed();
+            }
+            else if(Current_Hour==22 && Current_Second>0)
+            {
+                document.write("Sorry, Now Closed😞<br>");
+                closed();
+            }
+            else
+            {
+                document.write("WelCome, Now Open😍<br>");
+                open();
+            }
+        }
+        else if(Type=='Manager') //...For Manager...//
+        {
+            document.write("Hello Manager💚<br>");
+
+            //...The manager can enter the coffee shop at any time...//
+            document.write("WelCome, Now Open😍<br>");
+            open();
+        }
+        else //...For Invalid User...//
+        {
+            document.write("Invalid Input💔<br>");
+            document.write("Please Enter Correct Input☹️<br>");
+            //...Invalid Input:(....//
+            Invalid();
+        }
+        
+    </script>
+</body>
+</html>
